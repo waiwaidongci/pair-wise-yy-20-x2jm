@@ -194,6 +194,165 @@ select {
   padding: 10px;
 }
 
+.saved-item.editing {
+  border-color: var(--active);
+}
+
+.saved-head {
+  width: 100%;
+  min-height: auto;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  padding: 0;
+}
+
+.rev-list {
+  margin-top: 8px;
+  border-top: 1px dashed var(--line);
+  padding-top: 6px;
+}
+
+.rev-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.rev-row.head {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.rev-actions {
+  display: flex;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+button.link {
+  min-height: auto;
+  border: 0;
+  background: transparent;
+  color: var(--active);
+  padding: 2px 4px;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+button.secondary {
+  background: var(--muted);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#notices {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+#notices:has(> .hidden):not(:has(> :not(.hidden))) {
+  display: none;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  background: #fdf3dc;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.banner-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.banner-actions button {
+  min-height: 32px;
+}
+
+.stale-hint {
+  border: 1px dashed var(--gold);
+  border-radius: 8px;
+  background: #fffaf0;
+  color: var(--muted);
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.conflict-panel {
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  background: #fdeceb;
+  padding: 12px 14px;
+}
+
+.conflict-panel h2 {
+  color: var(--accent);
+  font-size: 15px;
+}
+
+.conflict-panel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.conflict-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid #eec2c0;
+  border-radius: 8px;
+  background: white;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
+.conflict-actions {
+  display: flex;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.conflict-actions button {
+  min-height: 32px;
+}
+
+.cell.conflicted {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+  background: #fdeceb;
+}
+
+.note time {
+  display: block;
+  margin-top: 6px;
+  color: #a89c8a;
+  font-size: 12px;
+}
+
 .note {
   border: 1px solid var(--line);
   border-radius: 8px;

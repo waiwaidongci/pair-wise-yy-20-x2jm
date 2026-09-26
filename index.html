@@ -16,7 +16,8 @@
       <div class="transport">
         <button id="playBtn" type="button">播放</button>
         <button id="stopBtn" type="button">停止</button>
-        <button id="saveBtn" type="button">保存方案</button>
+        <button id="saveBtn" type="button">保存为新方案</button>
+        <button id="forkBtn" class="secondary" type="button">另存新方案</button>
       </div>
     </header>
 
@@ -33,6 +34,13 @@
         </select>
       </label>
       <label>难点批注<input id="noteInput" placeholder="如：第2小节小锣晚半拍"></label>
+    </section>
+
+    <section id="notices">
+      <div id="viewBar" class="banner hidden"></div>
+      <div id="sessionBar" class="banner hidden"></div>
+      <div id="conflictPanel" class="conflict-panel hidden"></div>
+      <div id="staleHint" class="stale-hint hidden"></div>
     </section>
 
     <section class="stage">
