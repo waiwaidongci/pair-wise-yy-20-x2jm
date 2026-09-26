@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>传统戏曲锣鼓经排练可视化</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="top">
+      <div>
+        <p>Luogujing Rehearsal Grid</p>
+        <h1>传统戏曲锣鼓经排练可视化</h1>
+      </div>
+      <div class="transport">
+        <button id="playBtn" type="button">播放</button>
+        <button id="stopBtn" type="button">停止</button>
+        <button id="saveBtn" type="button">保存方案</button>
+      </div>
+    </header>
+
+    <section class="controls">
+      <label>剧目片段<input id="pieceName" placeholder="如：出场锣鼓-慢起"></label>
+      <label>速度BPM<input id="bpmInput" type="number" min="40" max="220" value="96"></label>
+      <label>循环小节
+        <select id="loopSelect">
+          <option value="">全段</option>
+          <option value="0">第1小节</option>
+          <option value="1">第2小节</option>
+          <option value="2">第3小节</option>
+          <option value="3">第4小节</option>
+        </select>
+      </label>
+      <label>难点批注<input id="noteInput" placeholder="如：第2小节小锣晚半拍"></label>
+    </section>
+
+    <section class="stage">
+      <aside class="segments">
+        <h2>已存方案</h2>
+        <div id="savedList"></div>
+      </aside>
+      <section class="score">
+        <div id="grid" class="grid"></div>
+      </section>
+      <aside class="notes">
+        <h2>段落结构</h2>
+        <div id="structure"></div>
+        <h2>批注</h2>
+        <div id="notesList"></div>
+      </aside>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

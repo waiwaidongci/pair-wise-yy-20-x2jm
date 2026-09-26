@@ -1,0 +1,25 @@
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build outputs
+dist/
+build/
+out/
+
+# Logs and caches
+*.log
+.cache/
+.parcel-cache/
+.vite/
+
+# Local environment files
+.env
+.env.*
+
+# Editor folders
+.vscode/
+.idea/
