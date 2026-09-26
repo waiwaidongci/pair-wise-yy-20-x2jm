@@ -17,8 +17,11 @@
         <button id="playBtn" type="button">播放</button>
         <button id="stopBtn" type="button">停止</button>
         <button id="saveBtn" type="button">保存方案</button>
+        <button id="saveAsBtn" type="button" class="ghost">另存为新方案</button>
       </div>
     </header>
+
+    <p id="statusLine" class="status" role="status"></p>
 
     <section class="controls">
       <label>剧目片段<input id="pieceName" placeholder="如：出场锣鼓-慢起"></label>
@@ -32,8 +35,12 @@
           <option value="3">第4小节</option>
         </select>
       </label>
+      <label>署名（本排练页）<input id="authorInput" placeholder="如：琴师甲"></label>
       <label>难点批注<input id="noteInput" placeholder="如：第2小节小锣晚半拍"></label>
     </section>
+
+    <section id="viewBanner" class="view-banner" hidden></section>
+    <section id="conflictPanel" class="conflict-panel" hidden></section>
 
     <section class="stage">
       <aside class="segments">
